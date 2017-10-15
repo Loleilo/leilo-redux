@@ -1,0 +1,5 @@
+module.exports= {
+    OPTIMISTIC: "OPTIMISTIC",
+    PESSIMISTIC: "PESSIMISTIC",
+    WAIT_ACK: "WAIT_ACK",
+};
