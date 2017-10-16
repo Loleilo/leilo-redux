@@ -1,6 +1,6 @@
 {
   "name": "leilo-redux",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Redux bindings for leilo-client-api",
   "main": "index.js",
   "repository": "https://github.com/Loleilo/leilo-redux",
