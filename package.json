@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Redux bindings for leilo-client-api",
   "main": "index.js",
+  "repository": "https://github.com/Loleilo/leilo-redux",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,6 +16,8 @@
   },
   "devDependencies": {
     "redux": "latest",
-    "redux-logger": "^3.0.6"
+    "redux-logger": "^3.0.6",
+    "colors": "^1.1.2",
+    "longjohn": "^0.2.12"
   }
 }
