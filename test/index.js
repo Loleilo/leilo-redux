@@ -18,8 +18,6 @@ const actualMiddleware = redux.applyMiddleware(...middlewares);
 
 const store = redux.createStore(rootReducer, actualMiddleware);
 
-console.log(store.getState());
-
 let step = 1;
 
 store.subscribe(() => {
@@ -48,7 +46,7 @@ store.dispatch({
             wsConnector: {
                 credentials: {
                     username: "root",
-                    password: "pass",
+                    password: "pass1",
                 }
             }
         }
