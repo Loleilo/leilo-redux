@@ -4,15 +4,16 @@ const DISCONNECTED = 'DISCONNECTED',
     CONNECTED = 'CONNECTED',
     CONNECTING = 'CONNECTING';
 
-module.exports.reducer = (state = DISCONNECTED, action) => {
-    if (action.type === actions.CONNECT)return CONNECTING;
+module.exports.reducer = (state = {status: DISCONNECTED}, action) => {
+    if (action.type === actions.CONNECT)
+        return {status: CONNECTING};
     if (action.type !== actions.EVT)return state;
     const evt = action.evt;
     switch (evt.name) {
         case 'connectSuccess':
-            return CONNECTED;
+            return {status: CONNECTED, username: action.payload.username};
         case 'disconnect':
-            return DISCONNECTED;
+            return {status: DISCONNECTED};
     }
     return state;
 };

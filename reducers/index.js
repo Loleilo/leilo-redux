@@ -1,8 +1,8 @@
 const obj = require('./obj');
-const wsConnector = require('./wsConnector');
+const wsConnector = require('./connectionStatus');
 const combineReducers = require("redux").combineReducers;
 
 module.exports = combineReducers({
     serverState: obj(),
-    connectionState: wsConnector.reducer,
+    connectionStatus: wsConnector.reducer,
 });

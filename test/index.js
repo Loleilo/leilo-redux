@@ -2,7 +2,7 @@ const redux = require('redux');
 const leilo = require('../middleware');
 const actions = require("../actions.js");
 const rootReducer=require('../reducers');
-const wsConnector = require("../reducers/wsConnector.js");
+const wsConnector = require("../reducers/connectionStatus.js");
 
 const middlewares = [];
 
@@ -25,7 +25,7 @@ let step = 1;
 store.subscribe(() => {
     const state = store.getState();
 
-    if (step === 1 && state.connectionState === wsConnector.STATUS.CONNECTED) {
+    if (step === 1 && state.connectionStatus.status === wsConnector.STATUS.CONNECTED) {
         step++;
         store.dispatch({
             type: actions.EVT,
