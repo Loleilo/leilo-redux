@@ -11,15 +11,15 @@ Package has 2 parts so far:
  ```javascript
  store={
     serverState: {}, //the object stored on the server, as synced with client
-    connectionStatus: {} //status of connection
+    connectionStatus: {} connectiontion
  }
 ```
 
 - server state will look exactly like server state
-- connection status looks like:
+- connection connection looks like:
 ```javascript
 connectionStatus={
-    status: DISCONNECTED/CONNECTED/CONNECTING,
+    connection: DISCONNECTED/CONNECTED/CONNECTING,
     username: ...
 }
 ```

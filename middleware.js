@@ -2,6 +2,8 @@ const client = require('leilo-client-api');
 const actions = require('./actions');
 const d = require('./_leilo-redux/util').getDefault;
 const MODES = require('./sendModes');
+const consts=require('leilo-client-api/consts');
+const localID=consts.localID;
 
 module.exports = (store) => {
     let conn;
@@ -25,11 +27,13 @@ module.exports = (store) => {
 
                 //attach events
                 conn.on({
-                    name: '*'
+                    name: '*',
+                    dst: localID,
                 }, handler);
                 conn.on({
                     name: '*',
                     path: '**',
+                    dst: localID,
                 }, handler);
                 break;
             case actions.EVT:
